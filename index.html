@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OCL Network - Federated Identity Infrastructure for Healthcare AI Agents">
+    <title>OCL Network | Federated Identity for Healthcare AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0a1628 0%, #0d3a52 50%, #0f5a6e 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Circuit board pattern overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255,255,255,0.03) 50px, rgba(255,255,255,0.03) 51px),
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255,255,255,0.03) 50px, rgba(255,255,255,0.03) 51px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Animated circuit lines */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(52, 211, 153, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 3.8em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            text-shadow: 0 0 30px rgba(52, 211, 153, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            color: #e0e7ff;
+            font-weight: 400;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .intro {
+            font-size: 1.2em;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 60px;
+            text-align: center;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 35px 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(52, 211, 153, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #34d399, #3b82f6);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            border-color: rgba(52, 211, 153, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(52, 211, 153, 0.2);
+        }
+
+        .feature:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature h3 {
+            color: #34d399;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .feature p {
+            color: #94a3b8;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #34d399, #3b82f6);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1.05em;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #34d399, #3b82f6);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 211, 153, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #34d399;
+            border: 2px solid #34d399;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(52, 211, 153, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #34d399;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #6ee7b7;
+        }
+
+        .footer code {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            .intro {
+                font-size: 1em;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .links {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Subtle animation for circuit effect */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .feature::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(52, 211, 153, 0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>OCL Network</h1>
+            <div class="tagline">Federated Identity Infrastructure for Healthcare AI Agents</div>
+            <div class="badge">SPIFFE-Based</div>
+        </div>
+
+        <p class="intro">
+            The OCL Network provides SPIFFE-based authentication and governance for AI agents 
+            operating across health systems. Built by Open City Labs for multi-institutional 
+            research and clinical deployment.
+        </p>
+
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">🔐</span>
+                <h3>Federated Authentication</h3>
+                <p>SPIFFE/SPIRE-based identity for AI agents across organizational boundaries. No shared secrets, no API keys.</p>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">🛡️</span>
+                <h3>Zero-Trust Architecture</h3>
+                <p>Policy-driven access control using Open Policy Agent. Every agent interaction is authenticated and authorized.</p>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">🏥</span>
+                <h3>Multi-Institutional Coordination</h3>
+                <p>Enable AI agents to collaborate across health systems while maintaining institutional sovereignty.</p>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">📊</span>
+                <h3>Real-Time Governance</h3>
+                <p>Monitor agent performance, audit trails, and compliance reporting across the entire network.</p>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://opencitylabs.com" class="btn btn-primary">Learn About Open City Labs</a>
+            <a href="mailto:matt@opencitylabs.com" class="btn btn-secondary">Contact Us</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Open City Labs | A project of <a href="https://opencitylabs.com">opencitylabs.com</a></p>
+            <p style="margin-top: 15px;">
+                Trust Domain: <code>spiffe://ocl.network</code>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
