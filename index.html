@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OCL Network - Federated Identity Infrastructure for Healthcare AI Agents">
-    <title>OCL Network | Federated Identity for Healthcare AI</title>
+    <meta name="description" content="OCL Network - Collaborative AI Research Infrastructure for Multi-Institutional Healthcare Studies">
+    <title>OCL Network | Collaborative AI Research Infrastructure</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -98,6 +98,50 @@
             margin-right: auto;
         }
 
+        .intro strong {
+            color: #34d399;
+            font-weight: 600;
+        }
+
+        .imagine-section {
+            font-size: 1.15em;
+            color: #e0e7ff;
+            line-height: 1.9;
+            margin-bottom: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .imagine-section p {
+            margin-bottom: 20px;
+        }
+
+        .imagine-section .question {
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .imagine-section .question::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #34d399;
+            font-weight: bold;
+        }
+
+        .imagine-section .closing {
+            text-align: center;
+            font-size: 1.3em;
+            color: #34d399;
+            font-weight: 600;
+            margin-top: 30px;
+            text-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+        }
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -171,6 +215,77 @@
             box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
         }
 
+        .audience-section {
+            margin-bottom: 70px;
+        }
+
+        .audience-section h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .audience-paths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .audience-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 40px 35px;
+            border-radius: 12px;
+            border: 2px solid rgba(52, 211, 153, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .audience-card:hover {
+            border-color: rgba(52, 211, 153, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(52, 211, 153, 0.25);
+        }
+
+        .audience-card h3 {
+            color: #34d399;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .audience-card p {
+            color: #cbd5e1;
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        .social-proof {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 35px 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .social-proof h3 {
+            color: #3b82f6;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .social-proof p {
+            color: #cbd5e1;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
         .links {
             display: flex;
             gap: 20px;
@@ -230,15 +345,6 @@
             color: #6ee7b7;
         }
 
-        .footer code {
-            background: rgba(15, 23, 42, 0.8);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            color: #34d399;
-            border: 1px solid rgba(52, 211, 153, 0.3);
-        }
-
         @media (max-width: 768px) {
             .container {
                 padding: 40px 25px;
@@ -256,7 +362,15 @@
                 font-size: 1em;
             }
 
+            .imagine-section {
+                font-size: 1em;
+            }
+
             .features {
+                grid-template-columns: 1fr;
+            }
+
+            .audience-paths {
                 grid-template-columns: 1fr;
             }
 
@@ -296,52 +410,82 @@
     <div class="container">
         <div class="header">
             <h1>OCL Network</h1>
-            <div class="tagline">Federated Identity Infrastructure for Healthcare AI Agents</div>
-            <div class="badge">SPIFFE-Based</div>
+            <div class="tagline">Collaborative AI Research Infrastructure</div>
+            <div class="badge">Built for Multi-Institutional Research</div>
         </div>
 
-        <p class="intro">
-            The OCL Network provides SPIFFE-based authentication and governance for AI agents 
-            operating across health systems. Built by Open City Labs for multi-institutional 
-            research and clinical deployment.
-        </p>
+        <div class="imagine-section">
+            <p style="text-align: center; font-size: 1.2em; margin-bottom: 25px;"><strong>Imagine you could:</strong></p>
+            
+            <p class="question">Deploy AI and receive immediate benchmarks on its accuracy and patient safety?</p>
+            
+            <p class="question">Advance groundbreaking research that enables collaboration between different organizations' AI agents to deliver better outcomes for patients?</p>
+            
+            <p class="question">Scale your healthcare AI tech to impact more lives?</p>
+            
+            <p style="text-align: center; font-size: 1.15em; color: #e0e7ff; margin-top: 30px; margin-bottom: 25px; font-style: italic;">All of this without transmitting patient data...</p>
+            
+            <p class="closing">With OCL Network's federated AI governance layer,<br><span style="font-size: 1.3em; font-weight: 700;">you can.</span></p>
+        </div>
+
+        <div class="audience-section">
+            <h2>Built for Healthcare Innovation</h2>
+            <div class="audience-paths">
+                <div class="audience-card">
+                    <h3>For Researchers</h3>
+                    <p>Collaborate across institutions without centralizing data. Generate high-impact publications with diverse, representative cohorts.</p>
+                </div>
+
+                <div class="audience-card">
+                    <h3>For Health Systems</h3>
+                    <p>Deploy AI with confidence. Monitor performance, ensure safety, and maintain control over your data.</p>
+                </div>
+
+                <div class="audience-card">
+                    <h3>For AI Innovators</h3>
+                    <p>Accelerate your path to FDA authorization. Demonstrate safety and effectiveness across real-world clinical settings.</p>
+                </div>
+            </div>
+        </div>
 
         <div class="features">
             <div class="feature">
-                <span class="feature-icon">🔐</span>
-                <h3>Federated Authentication</h3>
-                <p>SPIFFE/SPIRE-based identity for AI agents across organizational boundaries. No shared secrets, no API keys.</p>
+                <span class="feature-icon">🔬</span>
+                <h3>Multi-Institutional Collaboration</h3>
+                <p>Enable AI agents to work together across health systems while each institution maintains sovereignty over their own data and governance.</p>
             </div>
 
             <div class="feature">
-                <span class="feature-icon">🛡️</span>
-                <h3>Zero-Trust Architecture</h3>
-                <p>Policy-driven access control using Open Policy Agent. Every agent interaction is authenticated and authorized.</p>
+                <span class="feature-icon">✓</span>
+                <h3>Real-Time Safety Benchmarks</h3>
+                <p>Monitor AI performance, patient safety metrics, and clinical outcomes across your network with complete audit trails.</p>
             </div>
 
             <div class="feature">
                 <span class="feature-icon">🏥</span>
-                <h3>Multi-Institutional Coordination</h3>
-                <p>Enable AI agents to collaborate across health systems while maintaining institutional sovereignty.</p>
+                <h3>Research-Grade Infrastructure</h3>
+                <p>Built to support FDA authorization pathways with the governance, auditability, and compliance federal programs require.</p>
             </div>
 
             <div class="feature">
-                <span class="feature-icon">📊</span>
-                <h3>Real-Time Governance</h3>
-                <p>Monitor agent performance, audit trails, and compliance reporting across the entire network.</p>
+                <span class="feature-icon">🔐</span>
+                <h3>Your Data Stays Home</h3>
+                <p>Federated architecture means insights travel while sensitive patient data remains under your institution's control.</p>
             </div>
         </div>
 
+        <div class="social-proof">
+            <h3>Built for ARPA-H ADVOCATE</h3>
+            <p>Supporting multi-institutional cardiovascular AI research with the governance infrastructure federal programs require.</p>
+        </div>
+
         <div class="links">
-            <a href="https://opencitylabs.com" class="btn btn-primary">Learn About Open City Labs</a>
-            <a href="mailto:matt@opencitylabs.com" class="btn btn-secondary">Contact Us</a>
+            <a href="mailto:matt@opencitylabs.com" class="btn btn-primary">Schedule a Demo</a>
+            <a href="https://opencitylabs.com" class="btn btn-secondary">Learn About Open City Labs</a>
         </div>
 
         <div class="footer">
-            <p>&copy; 2026 Open City Labs | A project of <a href="https://opencitylabs.com">opencitylabs.com</a></p>
-            <p style="margin-top: 15px;">
-                Trust Domain: <code>spiffe://ocl.network</code>
-            </p>
+            <p>&copy; 2026 Open City Labs | <a href="https://opencitylabs.com">opencitylabs.com</a></p>
         </div>
     </div>
 </body>
