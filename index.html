@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OCL Network - Collaborative AI Research Infrastructure for Multi-Institutional Healthcare Studies">
-    <title>OCL Network | Collaborative AI Research Infrastructure</title>
+    <meta name="description" content="OCL Network - The Trust Layer for Healthcare AI. Deploy, fine-tune, and govern clinical AI agents with confidence.">
+    <title>OCL Network | The Trust Layer for Healthcare AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -65,8 +65,8 @@
 
         .header {
             text-align: center;
-            margin-bottom: 80px;
-            padding-bottom: 40px;
+            margin-bottom: 70px;
+            padding-bottom: 35px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -80,20 +80,42 @@
         }
 
         .tagline {
-            font-size: 1.5em;
+            font-size: 1.6em;
             color: #e0e7ff;
-            font-weight: 400;
+            font-weight: 600;
             margin-top: 20px;
             line-height: 1.4;
         }
 
-        .intro {
-            font-size: 1.2em;
+        .subtitle {
+            font-size: 1.15em;
             color: #cbd5e1;
-            line-height: 1.8;
+            font-weight: 400;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #34d399, #3b82f6);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+        }
+
+        .intro {
+            font-size: 1.25em;
+            color: #e0e7ff;
+            line-height: 1.9;
             margin-bottom: 60px;
             text-align: center;
-            max-width: 850px;
+            max-width: 950px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -103,43 +125,71 @@
             font-weight: 600;
         }
 
-        .imagine-section {
-            font-size: 1.15em;
-            color: #e0e7ff;
-            line-height: 1.9;
-            margin-bottom: 50px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-bottom: 70px;
         }
 
-        .imagine-section p {
-            margin-bottom: 20px;
+        .value-prop {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 40px 35px;
+            border-radius: 12px;
+            border: 2px solid rgba(52, 211, 153, 0.3);
+            transition: all 0.3s ease;
         }
 
-        .imagine-section .question {
+        .value-prop:hover {
+            border-color: rgba(52, 211, 153, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(52, 211, 153, 0.25);
+        }
+
+        .value-prop h3 {
+            color: #34d399;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .value-prop p {
             color: #cbd5e1;
-            margin-bottom: 8px;
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .value-prop ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .value-prop li {
+            color: #94a3b8;
+            font-size: 0.95em;
+            line-height: 1.7;
             padding-left: 25px;
             position: relative;
+            margin-bottom: 8px;
         }
 
-        .imagine-section .question::before {
-            content: '✓';
+        .value-prop li::before {
+            content: '→';
             position: absolute;
             left: 0;
             color: #34d399;
             font-weight: bold;
         }
 
-        .imagine-section .closing {
+        .section-header {
             text-align: center;
-            font-size: 1.3em;
-            color: #34d399;
+            font-size: 2.2em;
+            color: #ffffff;
+            margin-bottom: 45px;
             font-weight: 600;
-            margin-top: 30px;
-            text-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
         }
 
         .features {
@@ -201,30 +251,8 @@
             line-height: 1.6;
         }
 
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #34d399, #3b82f6);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 0.85em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 15px;
-            box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
-        }
-
         .audience-section {
             margin-bottom: 70px;
-        }
-
-        .audience-section h2 {
-            text-align: center;
-            font-size: 2em;
-            color: #ffffff;
-            margin-bottom: 40px;
-            font-weight: 600;
         }
 
         .audience-paths {
@@ -261,6 +289,46 @@
             color: #cbd5e1;
             font-size: 1em;
             line-height: 1.7;
+        }
+
+        .tech-specs {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 40px 45px;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            margin-bottom: 60px;
+        }
+
+        .tech-specs h3 {
+            color: #3b82f6;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tech-item {
+            color: #cbd5e1;
+            font-size: 1em;
+            line-height: 1.7;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tech-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #34d399;
+            font-weight: bold;
         }
 
         .social-proof {
@@ -362,15 +430,7 @@
                 font-size: 1em;
             }
 
-            .imagine-section {
-                font-size: 1em;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .audience-paths {
+            .features, .value-props, .audience-paths, .tech-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -410,73 +470,156 @@
     <div class="container">
         <div class="header">
             <h1>OCL Network</h1>
-            <div class="tagline">Collaborative AI Research Infrastructure</div>
-            <div class="badge">Built for Multi-Institutional Research</div>
+            <div class="tagline">The Trust Layer for Healthcare AI</div>
+            <div class="subtitle">Deploy, Fine-Tune, and Govern Clinical AI Agents with Confidence</div>
+            <div class="badge">Built for Scale</div>
         </div>
 
-        <div class="imagine-section">
-            <p style="text-align: center; font-size: 1.2em; margin-bottom: 25px;"><strong>Imagine you could:</strong></p>
-            
-            <p class="question">Deploy AI and receive immediate benchmarks on its accuracy and patient safety?</p>
-            
-            <p class="question">Advance groundbreaking research that enables collaboration between different organizations' AI agents to deliver better outcomes for patients?</p>
-            
-            <p class="question">Scale your healthcare AI tech to impact more lives?</p>
-            
-            <p style="text-align: center; font-size: 1.15em; color: #e0e7ff; margin-top: 30px; margin-bottom: 25px; font-style: italic;">All of this without transmitting patient data...</p>
-            
-            <p class="closing">With OCL Network's federated AI governance layer,<br><span style="font-size: 1.3em; font-weight: 700;">you can.</span></p>
+        <div class="intro">
+            <p>Our platform enables <strong>AI agents to collaborate with care teams at scale</strong>. Support both elite AI engineering teams and no-code fine-tuning. Rapidly customize clinical reasoning, care coordination, and lifestyle coaching agents that augment physician and nurse capabilities—all under unified governance that fast-tracks FDA approval.</p>
+        </div>
+
+        <div class="social-proof" style="margin-bottom: 60px;">
+            <h3>Build, Test, Deploy: Synthetic → Anonymized → Real-World Data</h3>
+            <p>Start with synthetic data for rapid development and learning. Graduate to anonymized datasets for pilot testing. Deploy with confidence using real-world clinical data—all on the same infrastructure with consistent governance and benchmarking throughout your AI lifecycle.</p>
+        </div>
+
+        <div class="value-props">
+            <div class="value-prop">
+                <h3>🎯 For Elite Engineering Teams</h3>
+                <p>Bring your own models and policies. Deploy anywhere with cloud-agnostic infrastructure built on SPIFFE/SPIRE.</p>
+                <ul>
+                    <li>Full data provenance for FDA reporting</li>
+                    <li>Advanced fine-tuning: LoRA, QLoRA, full training</li>
+                    <li>Support for 100+ foundation models</li>
+                    <li>No vendor lock-in</li>
+                </ul>
+            </div>
+
+            <div class="value-prop">
+                <h3>🚀 For Rapid Prototyping</h3>
+                <p>No-code fine-tuning interface for health systems and researchers who need results fast.</p>
+                <ul>
+                    <li>Pre-configured clinical reasoning templates</li>
+                    <li>Automatic safety benchmarking (MedHELM, DoNOHARM)</li>
+                    <li>Deploy in hours, not months</li>
+                    <li>Built-in governance policies</li>
+                </ul>
+            </div>
+
+            <div class="value-prop">
+                <h3>⚡ Automate Policy Enforcement</h3>
+                <p>Transform legal and compliance rules into executable policy-as-code. Consistent enforcement across distributed systems with version control and testing.</p>
+                <ul>
+                    <li>Regulatory rules become testable code</li>
+                    <li>Automatic, consistent enforcement at scale</li>
+                    <li>Version control for policy changes</li>
+                    <li>Eliminate manual compliance overhead</li>
+                </ul>
+            </div>
+
+            <div class="value-prop">
+                <h3>📊 Measure What Matters</h3>
+                <p>Privacy-preserving benchmarks that you can keep confidential while you build, or publish your results to our AI registry.</p>
+                <ul>
+                    <li>Real-time AI performance monitoring</li>
+                    <li>Patient safety metrics</li>
+                    <li>Clinical outcome tracking</li>
+                    <li>Complete audit trails</li>
+                </ul>
+            </div>
         </div>
 
         <div class="audience-section">
-            <h2>Built for Healthcare Innovation</h2>
+            <h2 class="section-header">Built for Everyone in Healthcare AI</h2>
             <div class="audience-paths">
                 <div class="audience-card">
-                    <h3>For Researchers</h3>
-                    <p>Collaborate across institutions without centralizing data. Generate high-impact publications with diverse, representative cohorts.</p>
-                </div>
-
-                <div class="audience-card">
                     <h3>For Health Systems</h3>
-                    <p>Deploy AI with confidence. Monitor performance, ensure safety, and maintain control over your data.</p>
+                    <p>Test and pilot vendors with synthetic/anonymized data → Deploy AI with confidence. Monitor performance, ensure safety, and maintain control over your data. Scale whole-person care teams by coordinating AI and human expertise.</p>
                 </div>
 
                 <div class="audience-card">
-                    <h3>For AI Innovators</h3>
-                    <p>Accelerate your path to FDA authorization. Demonstrate safety and effectiveness across real-world clinical settings.</p>
+                    <h3>For AI Startups</h3>
+                    <p>Accelerate the performance of your digital health/wellness application by building AI and testing with synthetic data. Confidently go to market with anonymized data. Demonstrate safety and effectiveness across real-world clinical settings with comprehensive governance infrastructure.</p>
+                </div>
+
+                <div class="audience-card">
+                    <h3>For Researchers</h3>
+                    <p>Collaborate across institutions without centralizing data. Generate high-impact publications with diverse, representative cohorts and reproducible AI experiments.</p>
+                </div>
+
+                <div class="audience-card">
+                    <h3>For Government Agencies</h3>
+                    <p>Translate legal rules into automated policy enforcement. Bridge the gap between regulatory intent and technical implementation with auditable, version-controlled policies that ensure consistent compliance across complex healthcare systems.</p>
+                </div>
+
+                <div class="audience-card">
+                    <h3>For Students</h3>
+                    <p>Learning to use AI and passionate about having an impact? Use our infrastructure and we will generate synthetic data for your test apps.</p>
                 </div>
             </div>
         </div>
 
+        <h2 class="section-header">Complete AI Lifecycle Management</h2>
         <div class="features">
             <div class="feature">
-                <span class="feature-icon">🔬</span>
-                <h3>Multi-Institutional Collaboration</h3>
-                <p>Enable AI agents to work together across health systems while each institution maintains sovereignty over their own data and governance.</p>
+                <span class="feature-icon">🔧</span>
+                <h3>Fine-Tune Anywhere</h3>
+                <p>Support for 100+ models including Llama, Qwen, DeepSeek, Mistral. 16-bit full tuning, LoRA, QLoRA with 2-8 bit quantization. Advanced algorithms: GaLore, DoRA, LongLoRA, PiSSA.</p>
             </div>
 
             <div class="feature">
-                <span class="feature-icon">✓</span>
-                <h3>Real-Time Safety Benchmarks</h3>
-                <p>Monitor AI performance, patient safety metrics, and clinical outcomes across your network with complete audit trails.</p>
+                <span class="feature-icon">☁️</span>
+                <h3>Cloud-Agnostic Deploy</h3>
+                <p>Run on AWS, Azure, GCP, or on-premises. Federated network architecture with SPIFFE/SPIRE ensures zero vendor lock-in while maintaining enterprise security.</p>
             </div>
 
             <div class="feature">
-                <span class="feature-icon">🏥</span>
-                <h3>Research-Grade Infrastructure</h3>
-                <p>Built to support FDA authorization pathways with the governance, auditability, and compliance federal programs require.</p>
+                <span class="feature-icon">🛡️</span>
+                <h3>Unified Governance</h3>
+                <p>Policy-as-code with centralized management across Kubernetes, microservices, and CI/CD. Consistent, granular access control with high performance via policy caching. Policies decouple from application logic for independent updates and testing.</p>
             </div>
 
             <div class="feature">
-                <span class="feature-icon">🔐</span>
+                <span class="feature-icon">📈</span>
+                <h3>Industry Benchmarks</h3>
+                <p>Privacy-preserving AI measurement on MedHELM, DoNOHARM, and custom clinical safety metrics. Keep results confidential while you build, or publish to our AI registry.</p>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">🤝</span>
+                <h3>Multi-Agent Collaboration</h3>
+                <p>Enable AI agents to work together across health systems. Each institution maintains data sovereignty while agents coordinate for superior patient outcomes.</p>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">🔒</span>
                 <h3>Your Data Stays Home</h3>
-                <p>Federated architecture means insights travel while sensitive patient data remains under your institution's control.</p>
+                <p>Federated architecture means insights travel while sensitive patient data remains under your institution's control. Built for HIPAA, HITECH, and research compliance.</p>
+            </div>
+        </div>
+
+        <div class="tech-specs">
+            <h3>Enterprise-Grade Technical Foundation</h3>
+            <div class="tech-grid">
+                <div class="tech-item">100+ foundation models supported</div>
+                <div class="tech-item">FHIR, HL7, TEFCA interoperability</div>
+                <div class="tech-item">SPIFFE/SPIRE identity infrastructure</div>
+                <div class="tech-item">OpenPolicy Agent governance</div>
+                <div class="tech-item">Multi-modal training (text, image, video)</div>
+                <div class="tech-item">FlashAttention-2 optimization</div>
+                <div class="tech-item">vLLM & SGLang inference</div>
+                <div class="tech-item">Comprehensive audit logging</div>
+                <div class="tech-item">FDA pathway support</div>
+                <div class="tech-item">Research-grade reproducibility</div>
+                <div class="tech-item">Real-time performance monitoring</div>
+                <div class="tech-item">Zero vendor lock-in</div>
             </div>
         </div>
 
         <div class="social-proof">
-            <h3>Built for ARPA-H ADVOCATE</h3>
-            <p>Supporting multi-institutional cardiovascular AI research with the governance infrastructure federal programs require.</p>
+            <h3>Supporting Federal Innovation</h3>
+            <p>Built for ARPA-H ADVOCATE program, enabling multi-institutional cardiovascular AI research with the governance infrastructure federal programs and FDA authorization pathways require.</p>
         </div>
 
         <div class="links">
